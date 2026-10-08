@@ -90,7 +90,7 @@ export const featured = {
     'Prometheus',
     'OpenTelemetry',
   ],
-  links: [],
+  links: [{ label: 'View code', href: 'https://github.com/zhepingjiang/Movie-Recommendation-System' }],
 }
 
 export const projects = [
