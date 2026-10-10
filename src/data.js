@@ -3,9 +3,8 @@
 export const profile = {
   name: 'Zheping Jiang',
   title: 'Software Engineer',
-  tagline: 'Java / Spring and full-stack web development',
   intro:
-    'I have 5.5 years of experience building and scaling document-centric enterprise systems at Veeva Systems and IBM. Since 2025 I have been building distributed and data-intensive systems of my own, including a real-time movie recommender.',
+    'I am a software engineer with 5.5 years of experience specializing in web development and distributed systems. At Veeva Systems I designed and scaled large backend systems, led cross-team initiatives, and delivered high-impact features across backend, frontend and cloud infrastructure. Since 2025 I have been building distributed and data-intensive systems of my own, including a real-time movie recommender.',
   location: 'Toronto, Canada',
   email: 'zheping.jiang@gmail.com',
   github: 'https://github.com/zhepingjiang',
@@ -15,7 +14,7 @@ export const profile = {
 
 export const stats = [
   { value: '5.5 yrs', label: 'as a software engineer at Veeva Systems' },
-  { value: '~500K', label: 'document versions customers publish each month through features I led' },
+  { value: '~10M', label: 'document links customers publish each month through features I led' },
   { value: '5+', label: 'features led end to end at Veeva, in teams of 3–4 engineers' },
   { value: '3.80', label: 'GPA, Computer Engineering, University of Toronto' },
 ]
@@ -162,10 +161,11 @@ export const experience = [
     team: 'Regulatory Information Management — Core Team',
     dates: 'Apr 2022 – Jun 2025',
     location: 'Toronto',
+    stack: ['Java', 'Spring Boot', 'MySQL', 'ActiveMQ', 'React', 'AWS (S3)', 'Linux', 'CI/CD'],
     bullets: [
       {
         lead: 'Designed and led multi-link publishing.',
-        text: 'Wrote the implementation design and led development of multi-link publishing (links, anchors, bookmarks, annotations) in a pipeline where customers such as Roche and Eli Lilly publish ~500K document versions and ~10M document links per month.',
+        text: 'Wrote the implementation design and led development of multi-link publishing (links, anchors, bookmarks, annotations) in a SaaS pipeline where customers such as Roche and Eli Lilly publish ~500K document versions and ~10M document links per month.',
       },
       {
         lead: 'Coordinated two teams.',
@@ -199,6 +199,7 @@ export const experience = [
     team: 'Regulatory Information Management — Submission Publishing',
     dates: 'Nov 2019 – Apr 2022',
     location: 'Toronto',
+    stack: ['Java', 'Spring Boot', 'MySQL', 'ActiveMQ', 'React', 'AWS (S3)', 'Linux', 'CI/CD'],
     bullets: [
       {
         lead: 'Regional submission support.',
@@ -214,6 +215,9 @@ export const experience = [
       },
     ],
   },
+]
+
+export const earlierExperience = [
   {
     role: 'Software Developer Intern',
     company: 'IBM',
@@ -263,13 +267,13 @@ export const skills = [
     group: 'Databases and storage',
     items: ['PostgreSQL', 'MySQL', 'Redis', 'Flyway', 'S3 / MinIO', 'Google Cloud Storage', 'Parquet'],
   },
-  { group: 'Streaming and search', items: ['Kafka', 'Flink', 'Elasticsearch', 'Caffeine'] },
+  { group: 'Messaging, streaming and search', items: ['Kafka', 'ActiveMQ', 'Flink', 'Elasticsearch', 'Caffeine'] },
   { group: 'Machine learning', items: ['scikit-learn', 'scikit-surprise', 'pandas', 'PyArrow'] },
   { group: 'Frontend', items: ['React', 'React Router', 'Vite', 'Tailwind CSS', 'Ant Design'] },
   {
     group: 'Cloud and infrastructure',
-    items: ['AWS', 'Google Cloud', 'Docker', 'Kubernetes (CronJob, Operators)', 'minikube', 'Kustomize', 'Nginx', 'Certbot', 'Linux', 'CI/CD'],
+    items: ['AWS', 'Google Cloud', 'Docker', 'Kubernetes (CronJob, Operators)', 'minikube', 'Kustomize', 'Nginx', 'Certbot', 'Linux', 'Git', 'CI/CD'],
   },
-  { group: 'Testing', items: ['JUnit', 'Flink test utilities', 'pytest'] },
+  { group: 'Testing and code quality', items: ['JUnit', 'Flink test utilities', 'pytest', 'SonarQube'] },
   { group: 'Observability', items: ['OpenTelemetry', 'Prometheus', 'Grafana', 'Grafana Tempo', 'Micrometer'] },
 ]

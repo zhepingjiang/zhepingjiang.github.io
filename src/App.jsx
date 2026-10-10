@@ -1,8 +1,9 @@
-import { profile, stats, featured, projects, experience, education, skills } from './data.js'
+import { profile, stats, featured, projects, experience, earlierExperience, education, skills } from './data.js'
 
 const nav = [
-  { href: '#projects', label: 'Projects' },
   { href: '#experience', label: 'Experience' },
+  { href: '#projects', label: 'Projects' },
+  { href: '#earlier', label: 'Earlier experience' },
   { href: '#skills', label: 'Skills' },
   { href: '#contact', label: 'Contact' },
 ]
@@ -68,7 +69,7 @@ function Hero() {
       <p className="text-sm font-medium text-slate-500 dark:text-slate-400">{profile.location}</p>
       <h1 className="mt-3 text-4xl font-bold tracking-tight sm:text-6xl">{profile.name}</h1>
       <p className="mt-4 text-xl text-slate-700 sm:text-2xl dark:text-slate-200">
-        {profile.title} <span className="text-slate-400">·</span> {profile.tagline}
+        {profile.title}
       </p>
       <p className="mt-6 max-w-2xl text-base leading-relaxed text-slate-600 sm:text-lg dark:text-slate-300">
         {profile.intro}
@@ -238,6 +239,13 @@ function Job({ job }) {
             </li>
           ))}
         </ul>
+        {job.stack && (
+          <div className="mt-4 flex flex-wrap gap-2">
+            {job.stack.map((item) => (
+              <Tag key={item}>{item}</Tag>
+            ))}
+          </div>
+        )}
       </div>
     </div>
   )
@@ -250,6 +258,14 @@ export default function App() {
       <main className="mx-auto max-w-5xl px-5">
         <Hero />
 
+        <Section id="experience" eyebrow="Experience" title="Where I have worked">
+          <div className="space-y-12">
+            {experience.map((job) => (
+              <Job key={job.role + job.company} job={job} />
+            ))}
+          </div>
+        </Section>
+
         <Section id="projects" eyebrow="2025 – 2026" title="What I have been building">
           <Featured />
           <div className="mt-6 grid gap-6 sm:grid-cols-2">
@@ -259,9 +275,9 @@ export default function App() {
           </div>
         </Section>
 
-        <Section id="experience" eyebrow="Experience" title="Where I have worked">
+        <Section id="earlier" eyebrow="Earlier experience" title="Internships and research">
           <div className="space-y-12">
-            {experience.map((job) => (
+            {earlierExperience.map((job) => (
               <Job key={job.role + job.company} job={job} />
             ))}
           </div>
@@ -291,8 +307,7 @@ export default function App() {
 
         <Section id="contact" eyebrow="Contact" title="Get in touch">
           <p className="max-w-2xl text-slate-600 dark:text-slate-300">
-            I am looking for software engineering roles in backend and full-stack development. The fastest way
-            to reach me is email.
+            I am looking for software engineering roles. The fastest way to reach me is email.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
             <Button href={`mailto:${profile.email}`} primary>
