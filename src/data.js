@@ -28,7 +28,7 @@ export const featured = {
   metrics: [
     { value: '9,730', label: 'movies' },
     { value: '700/s', label: 'view events handled' },
-    { value: '68%', label: 'faster slowest endpoint' },
+    { value: '130 → 41 ms', label: 'median response time of the slowest API call' },
     { value: '15% → 97%', label: 'search precision' },
   ],
   lanes: [
@@ -80,6 +80,11 @@ export const featured = {
     'React',
     'TypeScript',
     'Python',
+    'FastAPI',
+    'scikit-surprise',
+    'scikit-learn',
+    'pandas',
+    'PyArrow',
     'Kafka',
     'Flink',
     'Redis',
@@ -88,6 +93,7 @@ export const featured = {
     'gRPC',
     'Kubernetes',
     'Prometheus',
+    'Grafana',
     'OpenTelemetry',
   ],
   links: [{ label: 'View code', href: 'https://github.com/zhepingjiang/Movie-Recommendation-System' }],

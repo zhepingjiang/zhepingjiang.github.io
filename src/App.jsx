@@ -162,11 +162,17 @@ function Featured() {
       </div>
 
       {featured.links.length > 0 && (
-        <div className="mt-8 flex flex-wrap gap-3">
+        <div className="mt-8 flex flex-wrap gap-x-5 gap-y-1">
           {featured.links.map((link) => (
-            <Button key={link.href} href={link.href}>
-              {link.label}
-            </Button>
+            <a
+              key={link.href}
+              href={link.href}
+              target="_blank"
+              rel="noreferrer"
+              className="text-sm font-semibold text-indigo-600 hover:underline dark:text-indigo-400"
+            >
+              {link.label} →
+            </a>
           ))}
         </div>
       )}
